@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0c73060f-fb28-4ab3-8ea1-67e3c653cca8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/android/app/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/android/app/src/main/res/drawable/app_logo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/android/app/src/main/res/values/color.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/android/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/assets/images/app_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/ios/GoogleService-Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/constants.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/model/ChannelParticipation.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/model/ChatModel.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/model/ChatVideoContainer.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/model/ContactModel.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/model/ConversationModel.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/model/Friendship.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/model/HomeConversationModel.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/model/MessageData.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/model/User.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/services/FirebaseHelper.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/services/helper.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/ui/accountDetails/AccountDetailsScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/ui/auth/AuthScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/ui/chat/ChatScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/ui/contactUs/ContactUsScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/ui/fullScreenImageViewer/FullScreenImageViewer.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/ui/fullScreenVideoViewer/FullScreenVideoViewer.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/ui/home/HomeScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/ui/login/LoginScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/ui/onBoarding/OnBoardingScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/ui/profile/ProfileScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/ui/settings/SettingsScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DatingApp/flutter_dating_app/lib/ui/signUp/SignUpScreen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/android/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/android/settings_aar.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/assets/images/facebook_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/ios/GoogleService-Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/android/app/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/android/app/google-services.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/assets/images/auth_screen_image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/assets/images/code.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/assets/images/developer_mode.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/assets/images/firebase_auth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/assets/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/assets/images/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/ios/Runner/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/model/User.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/model/User.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/ui/auth/AuthScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/ui/auth/AuthScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/ui/home/HomeScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/ui/home/HomeScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/ui/login/LoginScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/ui/login/LoginScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/ui/onBoarding/OnBoardingScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/ui/onBoarding/OnBoardingScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/ui/services/Authenticate.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/ui/services/Authenticate.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/ui/signUp/SignUpScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/ui/signUp/SignUpScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/ui/utils/helper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/lib/ui/utils/helper.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../FlutterLoginScreen/flutter_login_screen/test/widget_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../InstaChatty/insta_chatty/lib/ui/profile/ProfileScreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../../InstaChatty/insta_chatty/lib/ui/profile/ProfileScreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/images/code.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/images/developer_mode.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/images/firebase_auth.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/images/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/widget_test.dart" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="10" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1c6LVOj2BDLrkLr8PR8KuL2Bhpe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="D:/FlutterFreebies" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c73060f-fb28-4ab3-8ea1-67e3c653cca8" name="Default Changelist" comment="" />
+      <created>1589844119124</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589844119124</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
