@@ -1,44 +1,37 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
 .DS_Store
-.idea/shelf
-/android.tests.dependencies
-/confluence/target
-/dependencies/repo
-/dist
-/local
-/gh-pages
-/ideaSDK
-/clionSDK
-/android-studio/sdk
-out/
-/tmp
-workspace.xml
-*.versionsBackup
-/idea/testData/debugger/tinyApp/classes*
-/jps-plugin/testData/kannotator
-/js/js.translator/testData/out/
-/js/js.translator/testData/out-min/
-.gradle/
-build/
-!**/src/**/build
-!**/test/**/build
+.atom/
+.buildlog/
+.history
+.svn/
+
+# IntelliJ related
 *.iml
-!**/testData/**/*.iml
-.idea/libraries/Gradle*.xml
-.idea/libraries/Maven*.xml
-.idea/artifacts/PILL_*.xml
-.idea/modules
-.idea/runConfigurations/JPS_*.xml
-.idea/runConfigurations/PILL_*.xml
-.idea/libraries
-.idea/modules.xml
-.idea/gradle.xml
-.idea/compiler.xml
-.idea/inspectionProfiles/profiles_settings.xml
-.idea/.name
-.idea/artifacts/dist_auto_*
-.idea/artifacts/ideaPlugin.xml
-kotlin-ultimate/
-node_modules/
-.rpt2_cache/
-libraries/tools/kotlin-test-nodejs-runner/lib/
-local.properties
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+
+# Web related
+lib/generated_plugin_registrant.dart
+
+# Exceptions to above rules.
+!/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
