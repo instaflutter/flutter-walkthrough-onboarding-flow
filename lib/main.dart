@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:page_view_indicators/circle_page_indicator.dart';
+
+const COLOR_ACCENT = 0xFFd756ff;
+const COLOR_PRIMARY_DARK = 0xFF6900be;
+const COLOR_PRIMARY = 0xFFa011f2;
 
 final _currentPageNotifier = ValueNotifier<int>(0);
 final List<String> _titlesList = [
@@ -41,7 +46,7 @@ Widget _buildCircleIndicator() {
 Widget getPage(IconData icon, String title, String subTitle) {
   return Center(
     child: Container(
-      color: Color(0xFFC22F22),
+      color: Color(COLOR_PRIMARY),
       child: Center(
         child: Padding(
           padding: const EdgeInsets.only(top: 100.0),
@@ -81,7 +86,7 @@ Widget getPage(IconData icon, String title, String subTitle) {
 Widget getLastPage() {
   return Center(
     child: Container(
-      color: Color(0xFFC22F22),
+      color: Color(COLOR_PRIMARY),
       child: Center(
         child: Padding(
           padding: const EdgeInsets.only(bottom: 40.0),
@@ -126,26 +131,38 @@ Widget getLastPage() {
   );
 }
 
-void main() => runApp(
-      MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-            body: Stack(
-          children: <Widget>[
-            PageView(
-              children: populatePages(),
-              onPageChanged: (int index) {
-                _currentPageNotifier.value = index;
-              },
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: Color(COLOR_PRIMARY_DARK)));
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+          body: Stack(
+        children: <Widget>[
+          PageView(
+            children: populatePages(),
+            onPageChanged: (int index) {
+              _currentPageNotifier.value = index;
+            },
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 30.0),
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: _buildCircleIndicator(),
             ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 30.0),
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                child: _buildCircleIndicator(),
-              ),
-            )
-          ],
-        )),
-      ),
+          )
+        ],
+      )),
     );
+  }
+}
+
+void main() => runApp(MyApp());
