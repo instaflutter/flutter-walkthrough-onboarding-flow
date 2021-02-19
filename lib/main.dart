@@ -1,135 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:page_view_indicators/circle_page_indicator.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 const COLOR_ACCENT = 0xFFd756ff;
 const COLOR_PRIMARY_DARK = 0xFF6900be;
 const COLOR_PRIMARY = 0xFFa011f2;
 
-final _currentPageNotifier = ValueNotifier<int>(0);
 final List<String> _titlesList = [
-  'Flutter Onboarding',
+  'Flutter OnBoarding',
   'Firebase Auth',
-  'Facebook Login'
+  'Facebook Login',
+  'Instaflutter.com',
+  'Jump straight into the action.'
 ];
 final List<String> _subtitlesList = [
-  'Build your onboarding flow in seconds.',
+  'Build your onBoarding flow in seconds.',
   'Use Firebase for user managements.',
-  'Leaverage Facebook to log in user easily.'
+  'Leverage Facebook to log in user easily.',
+  'Get more awesome templates',
+  'Get Started'
 ];
-final List<IconData> _imageList = [
+final List<dynamic> _imageList = [
   Icons.developer_mode,
   Icons.layers,
-  Icons.account_circle
+  Icons.account_circle,
+  'assets/images/ic_launcher_round.png',
+  Icons.code
 ];
-final List<Widget> _pages = [];
-
-List<Widget> populatePages() {
-  _pages.clear();
-  _titlesList.asMap().forEach((index, value) => _pages.add(getPage(
-      _imageList.elementAt(index), value, _subtitlesList.elementAt(index))));
-  _pages.add(getLastPage());
-  return _pages;
-}
-
-Widget _buildCircleIndicator() {
-  return CirclePageIndicator(
-    selectedDotColor: Colors.white,
-    dotColor: Colors.white30,
-    itemCount: _pages.length,
-    selectedSize: 8,
-    size: 6.5,
-    currentPageNotifier: _currentPageNotifier,
-  );
-}
-
-Widget getPage(IconData icon, String title, String subTitle) {
-  return Center(
-    child: Container(
-      color: Color(COLOR_PRIMARY),
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 100.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(40.0),
-                child: new Icon(
-                  icon,
-                  color: Colors.white,
-                  size: 120,
-                ),
-              ),
-              Text(
-                title,
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Text(
-                  subTitle,
-                  style: TextStyle(color: Colors.white70, fontSize: 17.0),
-                ),
-              )
-            ],
-          ),
-        ),
-      ),
-    ),
-  );
-}
-
-Widget getLastPage() {
-  return Center(
-    child: Container(
-      color: Color(COLOR_PRIMARY),
-      child: Center(
-        child: Padding(
-          padding: const EdgeInsets.only(bottom: 40.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.all(40.0),
-                child: new Icon(
-                  Icons.code,
-                  color: Colors.white,
-                  size: 120,
-                ),
-              ),
-              Text(
-                'Jump straight into the action.',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold),
-              ),
-              Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: OutlineButton(
-                    onPressed: () {},
-                    child: Text(
-                      "Get Started",
-                      style: TextStyle(
-                          fontSize: 20.0,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    borderSide: BorderSide(color: Colors.white),
-                    shape: StadiumBorder(),
-                  ))
-            ],
-          ),
-        ),
-      ),
-    ),
-  );
-}
 
 class MyApp extends StatefulWidget {
   @override
@@ -137,30 +33,100 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  int _currentIndex = 0;
+  PageController pageController = PageController();
+
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: Color(COLOR_PRIMARY_DARK)));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          body: Stack(
-        children: <Widget>[
-          PageView(
-            children: populatePages(),
-            onPageChanged: (int index) {
-              _currentPageNotifier.value = index;
-            },
-          ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 30.0),
-            child: Align(
-              alignment: Alignment.bottomCenter,
-              child: _buildCircleIndicator(),
+        backgroundColor: Color(COLOR_PRIMARY),
+        body: Stack(
+          children: <Widget>[
+            PageView.builder(
+              itemBuilder: (context, index) => getPage(
+                  _imageList[index],
+                  _titlesList[index],
+                  _subtitlesList[index],
+                  context,
+                  index + 1 == _titlesList.length),
+              controller: pageController,
+              itemCount: _titlesList.length,
+              onPageChanged: (int index) {
+                setState(() {
+                  _currentIndex = index;
+                });
+              },
             ),
-          )
-        ],
-      )),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 50.0),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: SmoothPageIndicator(
+                  controller: pageController,
+                  count: _titlesList.length,
+                  effect: ScrollingDotsEffect(
+                      activeDotColor: Colors.white,
+                      dotColor: Colors.grey.shade400,
+                      dotWidth: 8,
+                      dotHeight: 8),
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget getPage(dynamic image, String title, String subTitle,
+      BuildContext context, bool isLastPage) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        image is String
+            ? Image.asset(
+                image,
+                width: 150,
+                height: 150,
+                fit: BoxFit.cover,
+              )
+            : Icon(
+                image as IconData,
+                color: Colors.white,
+                size: 150,
+              ),
+        SizedBox(height: 40),
+        Text(
+          title.toUpperCase(),
+          style: TextStyle(
+              color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: _currentIndex + 1 == _titlesList.length
+              ? OutlineButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Get Started",
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  borderSide: BorderSide(color: Colors.white),
+                  shape: StadiumBorder(),
+                )
+              : Text(
+                  subTitle,
+                  style: TextStyle(color: Colors.white, fontSize: 14.0),
+                  textAlign: TextAlign.center,
+                ),
+        ),
+      ],
     );
   }
 }
