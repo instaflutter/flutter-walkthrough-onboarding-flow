@@ -3,7 +3,7 @@ import 'package:flutter_walkthrough/colors.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoarding extends StatefulWidget {
-  OnBoarding({Key? key}) : super(key: key);
+  const OnBoarding({Key? key}) : super(key: key);
 
   @override
   _OnBoardingState createState() => _OnBoardingState();
@@ -38,15 +38,15 @@ class _OnBoardingState extends State<OnBoarding> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(COLOR_PRIMARY),
+      backgroundColor: const Color(colorPrimary),
       body: Stack(
-        children: <Widget>[
+        children: [
           PageView.builder(
             itemBuilder: (context, index) => getPage(
-                _imageList[index],
-                _titlesList[index],
-                _subtitlesList[index],
-                index + 1 == _titlesList.length),
+              _imageList[index],
+              _titlesList[index],
+              _subtitlesList[index],
+            ),
             controller: pageController,
             itemCount: _titlesList.length,
             onPageChanged: (int index) {
@@ -65,7 +65,7 @@ class _OnBoardingState extends State<OnBoarding> {
                       : Alignment.bottomLeft,
                   child: OutlinedButton(
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       'Continue',
                       style: TextStyle(
                           fontSize: 14.0,
@@ -73,8 +73,8 @@ class _OnBoardingState extends State<OnBoarding> {
                           fontWeight: FontWeight.bold),
                     ),
                     style: OutlinedButton.styleFrom(
-                        side: BorderSide(color: Colors.white),
-                        shape: StadiumBorder()),
+                        side: const BorderSide(color: Colors.white),
+                        shape: const StadiumBorder()),
                   ),
                 )),
           ),
@@ -98,8 +98,7 @@ class _OnBoardingState extends State<OnBoarding> {
     );
   }
 
-  Widget getPage(
-      dynamic image, String title, String subTitle, bool isLastPage) {
+  Widget getPage(dynamic image, String title, String subTitle) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
@@ -116,10 +115,10 @@ class _OnBoardingState extends State<OnBoarding> {
                 color: Colors.white,
                 size: 150,
               ),
-        SizedBox(height: 40),
+        const SizedBox(height: 40),
         Text(
           title.toUpperCase(),
-          style: TextStyle(
+          style: const TextStyle(
               color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.bold),
           textAlign: TextAlign.center,
         ),
