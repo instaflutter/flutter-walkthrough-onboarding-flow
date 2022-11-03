@@ -3,35 +3,21 @@ import 'package:flutter_walkthrough/colors.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoarding extends StatefulWidget {
-  const OnBoarding({Key? key}) : super(key: key);
+  final List<dynamic> images;
+  final List<String> titles, subtitles;
+
+  const OnBoarding(
+      {Key? key,
+      required this.images,
+      required this.titles,
+      required this.subtitles})
+      : super(key: key);
 
   @override
-  _OnBoardingState createState() => _OnBoardingState();
+  State<OnBoarding> createState() => _OnBoardingState();
 }
 
 class _OnBoardingState extends State<OnBoarding> {
-  final List<String> _titlesList = [
-    'Flutter OnBoarding',
-    'Firebase Auth',
-    'Facebook Login',
-    'Instaflutter.com',
-    'Jump straight into the action.'
-  ];
-  final List<String> _subtitlesList = [
-    'Build your onBoarding flow in seconds.',
-    'Use Firebase for user managements.',
-    'Leverage Facebook to log in user easily.',
-    'Get more awesome templates',
-    'Get Started'
-  ];
-  final List<dynamic> _imageList = [
-    Icons.developer_mode,
-    Icons.layers,
-    Icons.account_circle,
-    'assets/images/ic_launcher_round.png',
-    Icons.code
-  ];
-
   int _currentIndex = 0;
   PageController pageController = PageController();
 
@@ -42,13 +28,13 @@ class _OnBoardingState extends State<OnBoarding> {
       body: Stack(
         children: [
           PageView.builder(
-            itemBuilder: (context, index) => getPage(
-              _imageList[index],
-              _titlesList[index],
-              _subtitlesList[index],
+            itemBuilder: (context, index) => OnBoardingPage(
+              image: widget.images[index],
+              title: widget.titles[index],
+              subtitle: widget.subtitles[index],
             ),
             controller: pageController,
-            itemCount: _titlesList.length,
+            itemCount: widget.titles.length,
             onPageChanged: (int index) {
               setState(() {
                 _currentIndex = index;
@@ -56,7 +42,7 @@ class _OnBoardingState extends State<OnBoarding> {
             },
           ),
           Visibility(
-            visible: _currentIndex + 1 == _titlesList.length,
+            visible: _currentIndex + 1 == widget.titles.length,
             child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Align(
@@ -65,6 +51,9 @@ class _OnBoardingState extends State<OnBoarding> {
                       : Alignment.bottomLeft,
                   child: OutlinedButton(
                     onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                        side: const BorderSide(color: Colors.white),
+                        shape: const StadiumBorder()),
                     child: const Text(
                       'Continue',
                       style: TextStyle(
@@ -72,9 +61,6 @@ class _OnBoardingState extends State<OnBoarding> {
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
-                    style: OutlinedButton.styleFrom(
-                        side: const BorderSide(color: Colors.white),
-                        shape: const StadiumBorder()),
                   ),
                 )),
           ),
@@ -84,7 +70,7 @@ class _OnBoardingState extends State<OnBoarding> {
               alignment: Alignment.bottomCenter,
               child: SmoothPageIndicator(
                 controller: pageController,
-                count: _titlesList.length,
+                count: widget.titles.length,
                 effect: ScrollingDotsEffect(
                     activeDotColor: Colors.white,
                     dotColor: Colors.grey.shade400,
@@ -98,29 +84,58 @@ class _OnBoardingState extends State<OnBoarding> {
     );
   }
 
-  Widget getPage(dynamic image, String title, String subTitle) {
+  @override
+  void dispose() {
+    super.dispose();
+    pageController.dispose();
+  }
+}
+
+class OnBoardingPage extends StatefulWidget {
+  final dynamic image;
+  final String title, subtitle;
+
+  const OnBoardingPage(
+      {Key? key, this.image, required this.title, required this.subtitle})
+      : super(key: key);
+
+  @override
+  State<OnBoardingPage> createState() => _OnBoardingPageState();
+}
+
+class _OnBoardingPageState extends State<OnBoardingPage> {
+  @override
+  Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        image is String
+      children: [
+        widget.image is String
             ? Image.asset(
-                image,
+                widget.image,
                 width: 150,
                 height: 150,
                 fit: BoxFit.cover,
               )
             : Icon(
-                image as IconData,
+                widget.image as IconData,
                 color: Colors.white,
                 size: 150,
               ),
         const SizedBox(height: 40),
         Text(
-          title.toUpperCase(),
+          widget.title.toUpperCase(),
           style: const TextStyle(
               color: Colors.white, fontSize: 18.0, fontWeight: FontWeight.bold),
           textAlign: TextAlign.center,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Text(
+            widget.subtitle,
+            style: const TextStyle(color: Colors.white, fontSize: 14.0),
+            textAlign: TextAlign.center,
+          ),
         ),
       ],
     );
