@@ -4,7 +4,7 @@ description: Flutter Walkthrough Starter Kit
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.18.2 <3.0.0"
+  sdk: ">=2.18.4 <3.0.0"
 
 dependencies:
   smooth_page_indicator: ^1.0.0+2
