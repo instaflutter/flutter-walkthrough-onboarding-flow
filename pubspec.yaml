@@ -7,15 +7,14 @@ environment:
   sdk: ">=2.18.4 <3.0.0"
 
 dependencies:
-  smooth_page_indicator: ^1.0.0+2
+  smooth_page_indicator: ^1.2.1
 
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.5
+  cupertino_icons: ^1.0.8
+  flutter_launcher_icons: ^0.14.4
+  flutter_lints: ^6.0.0
 
-dev_dependencies:
-  flutter_launcher_icons: ^0.10.0
-  flutter_lints: ^2.0.1
 
 flutter_icons:
   android: false
